@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> lamp </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage lamp;
+
+
+void setup()
+{
+  
+	size( 400, 267 );
+  
+	frameRate( 30 );
+  
+	number3=loadImage("images/lamp.jpg");
+   
+
+}
+
+
+void draw()
+{
+	
+	image(number3,0,0)
+	fill(255,255,255);
+	textSize(20);
+	text("Back",350,250);
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 240 && mouseY < 260 &&
+		mouseX > 350 && mouseX < 390)
+		{
+			link("escape room.html")
+		}
+	}
+  
+ 
+  
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

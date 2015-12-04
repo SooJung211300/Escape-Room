@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> escape room project  </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage number2; 
+
+
+void setup()
+{
+
+	size( 400,255 );
+	frameRate( 30 );
+	number2 = loadImage("images/aaa.jpg");
+
+}
+
+
+void draw()
+{
+
+	image(number2,0,0);
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseY > 200 && mouseY < 240 &&
+			mouseX > 340 && mouseX < 380)
+		{
+			link("escape room.html");
+		}
+	}
+	
+	text("BACK",350,225)
+	fill(255,255,255)
+
+}
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
