@@ -25,7 +25,60 @@ void draw()
 {
 
 	image(number5,0,0);
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 200 && mouseY < 265 &&
+		mouseX > 240 && mouseX < 380)
+		{
+			link("escape room.html");
+		}
+	}
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 225 && mouseY < 235 &&
+		  mouseX > 290 && mouseX < 295) 
+		{
+			link("number 6.html");
+		}
+	}
 
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 255 && mouseY < 265 &&
+		  mouseX > 45 && mouseX < 52) 
+		{
+			link("number0.html");
+		}
+	}
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 100 && mouseY < 150 &&
+		  mouseX > 340 && mouseX < 380) 
+		{
+			link("escape room final password.html");
+		}
+	}
+
+	fill(255,255,255);
+	text("BACK TO SECOND ROOM",250,250);
+	
+	
+	if (mouseX > 240 && mouseX < 380 && mouseY > 240 && mouseY < 280||
+	mouseX > 290 && mouseX < 295 && mouseY > 225 && mouseY < 280||
+	mouseX > 45 && mouseX < 52 && mouseY > 255 && mouseY < 265||
+	mouseY > 100 && mouseY < 150 && mouseX > 340 && mouseX < 380)
+	{
+		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
+		// Try using any of the options above to replace over HAND
+		cursor(HAND);
+	}
+	else	// else is the opposite of IF
+	{		// when the IF condition previous to it evaluates as false else will trigger
+		cursor(ARROW);
+	}
 
 }
 

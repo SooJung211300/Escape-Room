@@ -32,6 +32,23 @@ void draw()
 		}
 	}
 	
+	if (mouseX > 350 && mouseX < 370 && mouseY > 40 && mouseY < 70||
+	mouseX > 139 && mouseX < 160 && mouseY > 37 && mouseY < 70||
+	mouseX > 280 && mouseX < 330 && mouseY > 60 && mouseY < 110||
+	mouseX > 175 && mouseX < 205 && mouseY > 120 && mouseY < 140||
+	mouseX > 340 && mouseX < 370 && mouseY > 40 && mouseY < 90||
+	mouseY > 230 && mouseY < 250 && mouseX > 20 && mouseX < 30)
+	{
+		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
+		// Try using any of the options above to replace over HAND
+		cursor(HAND);
+	}
+	else	// else is the opposite of IF
+	{		// when the IF condition previous to it evaluates as false else will trigger
+		cursor(ARROW);
+	}
+
+	
 	if (mousePressed == true && mouseButton == LEFT)
 	{ 
 		if (mouseY > 55 && mouseY < 90 &&
@@ -49,7 +66,7 @@ void draw()
 			link("treasure box password.html")
 		}
 	} 
-	
+
 	if (mousePressed == true && mouseButton == LEFT)
 	{ 
 		if (mouseY > 60 && mouseY < 120 &&
@@ -58,6 +75,24 @@ void draw()
 			link("third room.html")
 		}
 	} 
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 37 && mouseY < 71 && mouseX > 139 && mouseX < 165) 
+		{
+			link("IV.html");
+		}
+	}    
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 230 && mouseY < 250 && mouseX > 20 && mouseX < 30) 
+		{
+			link("number2.html");
+		}
+	}
+
+
 
 
 }

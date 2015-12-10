@@ -25,11 +25,22 @@ void draw()
 	image(number3,0,0);
 	if (mousePressed == true && mouseButton == LEFT)
 	{
-		if (mouseY > 20 && mouseY < 200 &&
-			mouseX > 90 && mouseX < 300)
+		if (mouseY > 40 && mouseY < 200 &&
+			mouseX > 160 && mouseX < 240)
 		{
 			link("escape room.html");
 		}
+	}
+	
+	if (mouseX > 160 && mouseX < 240 && mouseY > 40 && mouseY < 200)
+	{
+		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
+		// Try using any of the options above to replace over HAND
+		cursor(HAND);
+	}
+	else	// else is the opposite of IF
+	{		// when the IF condition previous to it evaluates as false else will trigger
+		cursor(ARROW);
 	}
 
 }

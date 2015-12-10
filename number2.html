@@ -1,44 +1,42 @@
 <html>
 <head>
-<title> treasure box  </title>
-<script src="script/processing.js"></script>
+<title> escape room project  </title>
+<script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
 
-PImage treasurebox;
+PImage number7; 
 
 
+void setup()
+{
 
-void setup(){
-
-	size( 400,270 );
-	background(255,255,255 );
+	size( 400,255 );
 	frameRate( 30 );
-	
-	treasureBox = loadImage("images/treasurebox.jpg");
+	number7 = loadImage("images/number2.jpg");
 
 }
+
 
 void draw()
 {
 
-	image(treasureBox,0,0);
-	fill(255,255,255);
-	text(mouseX,10,10);
-	text(mouseY,50,10);
+	image(number7,0,0);
 	
-	
-
 	if (mousePressed == true && mouseButton == LEFT)
 	{
-		if (mouseX > 73 && mouseX < 336 && mouseY > 26 && mouseY < 158) 
+		if (mouseY > 200 && mouseY < 240 &&
+			mouseX > 340 && mouseX < 380)
 		{
-			link("inside the treasure box.html");
+			link("escape room.html");
 		}
 	}
 	
+	text("BACK",350,225);
+	fill(255,255,255);
 	
-	if (mouseX > 73 && mouseX < 336 && mouseY > 26 && mouseY < 158)
+	
+	if (mouseX > 340 && mouseX < 380 && mouseY > 200 && mouseY < 240)
 	{
 		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
 		// Try using any of the options above to replace over HAND
@@ -48,8 +46,7 @@ void draw()
 	{		// when the IF condition previous to it evaluates as false else will trigger
 		cursor(ARROW);
 	}
-	
-	
+
 }
 
 

@@ -1,64 +1,57 @@
 <html>
 <head>
-<title> treasure box  </title>
+<title> thrid room </title>
 <script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
 
-PImage number4;
-
+PImage background3;
 
 
 void setup()
 {
-
-	size( 400,270 );
-	background(255,255,255 );
-	frameRate( 30 );
-	
-	number4 = loadImage("images/opened treasure box.jpg");
+  
+  size( 400, 260 );
+  
+  frameRate( 30 );
+  
+   number6 = loadImage ("images/number6.jpg");
+   
 
 }
 
 
-
-
 void draw()
 {
-
-	image(number4,0,0);
-	fill(255,255,255);
+  
+	image(number6,0,0);
 	
+	textSize(20);
+	text("Back",320,250);
+	fill(255,255,255);
 
 	if (mousePressed == true && mouseButton == LEFT)
-	{
-		if (mouseY > 220 && mouseY < 240 &&
-			mouseX > 340 && mouseX < 380)
+	{ 
+		if (mouseY > 200 && mouseY < 300 &&
+		mouseX > 300 && mouseX < 350)
 		{
-			link("escape room.html");
+			link("third room.html")
 		}
 	}
-	
-	text("BACK",350,225);
-	fill(225,225,225);
-	
-	
-	if (mouseX > 340 && mouseX < 380 && mouseY > 220 && mouseY < 240)
+
+	if (mouseX > 300 && mouseX < 350 && mouseY > 200 && mouseY < 300)
 	{
 		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
 		// Try using any of the options above to replace over HAND
-		cursor(HAND);
+			cursor(HAND);
 	}
 	else	// else is the opposite of IF
 	{		// when the IF condition previous to it evaluates as false else will trigger
 		cursor(ARROW);
 	}
 
-
-	
-	
+  
 }
-
 
 </script>
 <canvas id="mycanvas"></canvas>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> escape room project  </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage number3; 
+
+
+
+void setup()
+{
+
+	size( 400,270 );
+	frameRate( 30 );
+	number3 = loadImage("images/background2.jpg");
+
+}
+
+
+void draw()
+{
+
+
+}
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

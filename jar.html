@@ -32,8 +32,20 @@ void draw()
 		}
 	}
 	
-	text("BACK",350,225)
-	fill(255,255,255)
+	text("BACK",350,225);
+	fill(255,255,255);
+	
+	
+	if (mouseX > 340 && mouseX < 380 && mouseY > 200 && mouseY < 240)
+	{
+		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
+		// Try using any of the options above to replace over HAND
+		cursor(HAND);
+	}
+	else	// else is the opposite of IF
+	{		// when the IF condition previous to it evaluates as false else will trigger
+		cursor(ARROW);
+	}
 
 }
 
