@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> last number </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage background3;
+
+
+void setup()
+{
+  
+  size( 400, 260 );
+  
+  frameRate( 30 );
+  
+   number0 = loadImage ("images/last number hint.jpg");
+   
+
+}
+
+
+void draw()
+{
+  
+    image(number0,0,0);
+	
+   textSize(20);
+   text("Back",320,250);
+   fill(255,255,255);
+   
+   if (mousePressed == true && mouseButton == LEFT)
+  { 
+      if (mouseY > 200 && mouseY < 300 &&
+          mouseX > 300 && mouseX < 350)
+      {
+          link("third room.html")
+       }
+  }
+  
+  
+	if (mouseX > 300 && mouseX < 350 && mouseY > 200 && mouseY < 300)
+	{
+		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
+		// Try using any of the options above to replace over HAND
+		cursor(HAND);
+	}
+	else	// else is the opposite of IF
+	{		// when the IF condition previous to it evaluates as false else will trigger
+		cursor(ARROW);
+	}
+
+ 
+  
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
+ 
+
+
+third room 에 잇는거 
+
+   if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 146 && mouseY < 153 && mouseX > 210 && mouseX < 215) 
+		{
+			link("last number.html");
+		}
+	}
+

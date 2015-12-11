@@ -1,11 +1,11 @@
 <html>
 <head>
-<title> opening  </title>
+<title> escape room project  </title>
 <script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
 
-PImage number30; 
+PImage number3; 
 
 
 
@@ -14,7 +14,7 @@ void setup()
 
 	size( 400,270 );
 	frameRate( 30 );
-	number30 = loadImage("images/openings/opening.jpg");
+	number3 = loadImage("images/background2.jpg");
 
 }
 
@@ -22,17 +22,17 @@ void setup()
 void draw()
 {
 
-	image(number30,0,0);
+	image(number3,0,0);
 	if (mousePressed == true && mouseButton == LEFT)
 	{
-		if (mouseY > 210 && mouseY < 240 &&
-			mouseX > 290 && mouseX < 370)
+		if (mouseY > 40 && mouseY < 200 &&
+			mouseX > 160 && mouseX < 240)
 		{
-			link("opening2.html");
+			link("escape room.html");
 		}
 	}
 	
-	if (mouseX > 290 && mouseX < 370 && mouseY > 210 && mouseY < 240)
+	if (mouseX > 160 && mouseX < 240 && mouseY > 40 && mouseY < 200)
 	{
 		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
 		// Try using any of the options above to replace over HAND

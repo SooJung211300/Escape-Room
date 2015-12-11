@@ -5,7 +5,7 @@
 <script type="text/processing" data-processing-target="mycanvas">
 
 
-PImage number30; 
+PImage number31; 
 
 
 
@@ -14,7 +14,7 @@ void setup()
 
 	size( 400,270 );
 	frameRate( 30 );
-	number30 = loadImage("images/openings/opening.jpg");
+	number31 = loadImage("images/openings/opening2.jpg");
 
 }
 
@@ -22,13 +22,13 @@ void setup()
 void draw()
 {
 
-	image(number30,0,0);
+	image(number31,0,0);
 	if (mousePressed == true && mouseButton == LEFT)
 	{
 		if (mouseY > 210 && mouseY < 240 &&
 			mouseX > 290 && mouseX < 370)
 		{
-			link("opening2.html");
+			link("opening3.html");
 		}
 	}
 	
@@ -42,6 +42,7 @@ void draw()
 	{		// when the IF condition previous to it evaluates as false else will trigger
 		cursor(ARROW);
 	}
+
 
 }
 
