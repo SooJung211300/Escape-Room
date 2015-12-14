@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> jar </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage number12;
+
+
+void setup()
+{
+  
+  size( 400, 255 );
+  
+  frameRate( 30 );
+  
+  number12 = loadImage("images/hint.jpg");
+   
+
+}
+
+
+void draw()
+{
+
+	image(number12,0,0);
+	
+	text("BACK",350,225);
+	fill(0,0,0);
+
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseY > 220 && mouseY < 230 &&
+		  mouseX > 345 && mouseX < 390) 
+		{
+			link("third room.html");
+		}
+	}
+	
+	if(mouseY > 220 && mouseY < 230 &&
+		  mouseX > 345 && mouseX < 390)
+ 	{
+			// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
+			// Try using any of the options above to replace over HAND
+			cursor(HAND);
+	}
+		else	// else is the opposite of IF
+	{		// when the IF condition previous to it evaluates as false else will trigger
+			cursor(ARROW);
+	}
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

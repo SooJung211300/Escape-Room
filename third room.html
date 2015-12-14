@@ -64,6 +64,15 @@ void draw()
 	
 	if (mousePressed == true && mouseButton == LEFT)
 	{ 
+		if (mouseY > 184 && mouseY < 200 && mouseX > 0 && mouseX < 20) 
+		{
+			link("last second number.html");
+		}
+	}
+
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
 		if (mouseY > 146 && mouseY < 153 && mouseX > 210 && mouseX < 215) 
 		{
 			link("last number.html");
@@ -78,7 +87,8 @@ void draw()
 	if (mouseX > 240 && mouseX < 380 && mouseY > 240 && mouseY < 280||
 	mouseX > 290 && mouseX < 295 && mouseY > 225 && mouseY < 280||
 	mouseX > 45 && mouseX < 52 && mouseY > 255 && mouseY < 265||
-	mouseY > 100 && mouseY < 150 && mouseX > 340 && mouseX < 380)
+	mouseY > 100 && mouseY < 150 && mouseX > 340 && mouseX < 380||
+	mouseY > 184 && mouseY < 200 && mouseX > 0 && mouseX < 20)
 	{
 		// ARROW, CROSS, HAND, MOVE, TEXT, WAIT
 		// Try using any of the options above to replace over HAND
